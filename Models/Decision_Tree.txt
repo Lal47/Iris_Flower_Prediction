@@ -1,0 +1,8 @@
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import metrics
+dtmodel=DecisionTreeClassifier()
+dtmodel.fit(train_X,train_Y)
+dtpredict=dtmodel.predict(test_X)
+
+#Check accuracy 
+dtaccuracy = metrics.accuracy_score(dtpredict,test_Y)

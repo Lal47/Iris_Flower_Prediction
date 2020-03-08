@@ -1,0 +1,6 @@
+#Random Forest
+from sklearn.ensemble import RandomForestClassifier
+rfModel = RandomForestClassifier(n_estimators = 100 , criterion = 'entropy' , random_state = 0 )
+rfModel.fit(train_X,train_Y)
+rfPred = rfModel.predict(test_X)
+rfaccuracy = metrics.accuracy_score(rfPred,test_Y)
